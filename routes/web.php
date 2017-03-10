@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'FlightController@index')->name('home');
+Route::get('/airports', 'AirportController@index');

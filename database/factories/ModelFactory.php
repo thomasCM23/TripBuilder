@@ -29,8 +29,8 @@ $factory->define(App\Flight::class, function (Faker\Generator $faker) {
     $randomDate = date("Y-m-d H:i:s", rand($start, $end));
 
     return [
-        'city_from_id' => rand(1, 8800),
-        'city_to_id' => rand(1, 8800),
+        'city_from_id' => rand(1, 4400),
+        'city_to_id' => rand(1, 4400),
         'time_departure' => $randomDate,
         'flight_type' => 'Economy',
         'flight_cost' => rand(150.00, 3000.00)
