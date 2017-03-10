@@ -19,8 +19,13 @@
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="/airports">Airports</a>
         <a class="mdl-navigation__link" href="/">Home</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+        @if(!Auth::check())
+        <a class="mdl-navigation__link" href="/login">Login</a>
+        <a class="mdl-navigation__link" href="/register">Register</a>
+        @endif
+        @if(Auth::check())
+        <a class="mdl-navigation__link" href="/logout">Logout</a>
+        @endif
       </nav>
     </div>
   </header>
@@ -29,7 +34,12 @@
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="/airports">Airports</a>
       <a class="mdl-navigation__link" href="/">Home</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
+      @if(!Auth::check())
+        <a class="mdl-navigation__link" href="/login">Login</a>
+        <a class="mdl-navigation__link" href="/register">Register</a>
+        @endif
+      @if(Auth::check())
+        <a class="mdl-navigation__link" href="/logout">Logout</a>
+        @endif
     </nav>
   </div>
