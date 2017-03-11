@@ -12,7 +12,7 @@
                  id="waterfall-exp">
         </div>
       </div>
-      @if(!Auth::check())<span>{{ Auth::user()->name}}</span>@endif
+      @if(Auth::check())<span>{{ Auth::user()->name}}</span>@endif
     </div>
     <!-- Bottom row, not visible on scroll -->
     <div class="mdl-layout__header-row">
