@@ -1,40 +1,19 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+# Trip Builder API
+This was a coding test from Momentum Ventures, it is a simple api where users can search for airports and flights and add trips to there catalog.
+---
+# Technologies used
+- [Laravel](https://laravel.com/) as the mvc framework that this api is based on
+- [MySQL](https://www.mysql.com/) that database used for local and RDS
+- [Elastic BeanStalk](https://aws.amazon.com/elasticbeanstalk/?sc_channel=PS&sc_campaign=acquisition_CA&sc_publisher=google&sc_medium=beanstalk_b&sc_content=elastic_beanstalk_e&sc_detail=elastic%20beanstalk&sc_category=beanstalk&sc_segment=161187838783&sc_matchtype=e&sc_country=CA&s_kwcid=AL!4422!3!161187838783!e!!g!!elastic%20beanstalk&ef_id=WGQD1AAABCOR08Wm:20170311165420:s) and [RDS](https://aws.amazon.com/rds/?sc_channel=PS&sc_campaign=acquisition_CA&sc_publisher=google&sc_medium=rds_b&sc_content=rds_bmm&sc_detail=%2Baws%20%2Brds&sc_category=rds&sc_segment=145412302946&sc_matchtype=b&sc_country=CA&s_kwcid=AL!4422!3!145412302946!b!!g!!%2Baws%20%2Brds&ef_id=WGQD1AAABCOR08Wm:20170311165432:s) used for public deployment on aws
+- [Visual Studio Code](https://code.visualstudio.com/)
+---
+# Running the API
+## Locally
+### Using Artisan
+1. Download Code
+2. Navigate into root of project using the terminal.
+3. Create a local MySQL DB called ```tripbuilder``` with terminal or with MySQL workbench.
+4. Run ```php artisan migrate``` this will create the tables.
+5. Locate the file called ```airport.sql``` and run it on the database you created earlier this will populate a list of airports.
+6. Run ```php artisan db:seed``` this will populate information for the flights tables.
+7. Run ```php artisan serve``` this will start the application.

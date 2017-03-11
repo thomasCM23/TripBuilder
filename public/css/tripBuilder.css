@@ -1,3 +1,29 @@
+a, li, th, td, p, button{
+  font-size: 12px !important;
+}
+
 .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
   padding-right: 0;
+}
+.padding-right{
+  padding-right: 160px;
+}
+.divTableTitle{
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 42px;
+    background-color: rgb(255,82,82);
+    color: rgb(255,255,255);
+    border-bottom: 5px solid rgb(0,188,212);
+    width:100%;
+    margin: 0 auto;
+}
+.demo-card-wide{
+  width:100%;
+  padding: 5%;
+}
+.fulllenght{
+  width:100%;
 }

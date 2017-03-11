@@ -14,7 +14,7 @@
             @include ('layouts.header')
 
             <main class="mdl-layout__content" style="background-color: #EFEFEF;">
-                <div class="page-content" style="width:90%; margin: 20px auto">
+                <div class="page-content" style="width:80%; margin: 20px auto">
                         @yield ('content')
                 </div>
             </main>
