@@ -35,7 +35,7 @@
                 <form method="POST" action="/trip/{{$trip->id}}">
                     {{ method_field('DELETE')}}
                     {{ csrf_field() }}
-                    <button type="submit" name="flightID" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" >
+                    <button type="submit" name="flightID" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored" >
                         <i class="material-icons">delete</i>
                     </button>
                 </from>
