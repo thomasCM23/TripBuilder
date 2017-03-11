@@ -24,6 +24,7 @@
         <a class="mdl-navigation__link" href="/register">Register</a>
         @endif
         @if(Auth::check())
+        <a class="mdl-navigation__link" href="/trip">Trips</a>
         <a class="mdl-navigation__link" href="/logout">Logout</a>
         @endif
       </nav>
@@ -39,6 +40,7 @@
         <a class="mdl-navigation__link" href="/register">Register</a>
         @endif
       @if(Auth::check())
+        <a class="mdl-navigation__link" href="/trip">Trips</a>
         <a class="mdl-navigation__link" href="/logout">Logout</a>
         @endif
     </nav>

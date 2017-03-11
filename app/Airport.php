@@ -17,7 +17,10 @@ class Airport extends Model
         
         if($search = $filters)
         {
-            $query->where('code', $search )->orWhere('name', $search)->orWhere('cityName', $search)->orWhere('countryName', $search);
+            $query->where('code', 'like', '%'.$search. '%' )
+            ->orWhere('name', 'like', '%'.$search. '%')
+            ->orWhere('cityName', 'like', '%'.$search. '%')
+            ->orWhere('countryName', 'like', '%'.$search. '%');
             return;
         }
     }

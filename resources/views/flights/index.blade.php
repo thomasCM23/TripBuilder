@@ -36,6 +36,8 @@
 <div class="divTableTitle">
     Flights Available
 </div>
+
+   
 <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="margin:0 auto; width:100%">
     <thead>
         <tr>
@@ -56,9 +58,14 @@
                 ${{$flight->flight_cost}}
             </td>
             <td class="mdl-data-table__cell--non-numeric">
-                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" >
-                    Book
-                </a>
+            <!-- not sure this is the best way of doing it -->
+                <form method="POST" action="/trip">
+                {{ csrf_field() }}
+                    <button type="submit" value="{{$flight->id}}" name="flightID" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" >
+                        Book
+                    </a>
+                
+                </from>
             <td>
         </tr>
         @endforeach

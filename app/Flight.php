@@ -17,6 +17,10 @@ class Flight extends Model
         //a flight goes to an airport
         return $this->belongsTo(Airport::class, 'city_to_id', 'id');
     }
+    public function trips()
+    {
+        return $this->hasMany(Trip::class, 'flight_id','id');
+    }
     public function scopeFilter($query, $filters)
     {
         
@@ -28,13 +32,13 @@ class Flight extends Model
         if($from = $filters['from'])
         {
             $query->whereHas('airportFrom', function($q) use ($from){
-                $q->where('cityName', $from);
+                $q->where('cityName','like', '%'.$from.'%');
             });
         }
         if($to = $filters['to'])
         {
             $query->whereHas('airportTo', function($q) use ($to){
-                $q->where('cityName', $to);
+                $q->where('cityName', 'like', '%'.$to . '%');
             });
         }
         if($min = $filters['min'])

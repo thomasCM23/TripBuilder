@@ -20,6 +20,11 @@ Route::get('/register', 'RegistrationController@create');
 Route::post('/register', 'RegistrationController@store');
 
 //login route
-Route::get('/login', 'SessionsController@create');
+Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
+
+//trip route
+Route::post('/trip', 'TripController@store'); //create new trip
+Route::get('/trip', 'TripController@index'); //list of the trips
+Route::delete('/trip/{trip}', 'TripController@destroy'); //delete trip
