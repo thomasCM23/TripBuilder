@@ -1,5 +1,5 @@
 # Trip Builder API
-This was a coding test from Momentum Ventures, it is a simple api where users can search for airports and flights and add trips to there catalog.
+This was a coding test from Momentum Ventures, it is a simple site where users can search for airports and flights and add trips to there catalog.
 ---
 # Technologies used
 - [Laravel](https://laravel.com/) as the mvc framework that this api is based on
